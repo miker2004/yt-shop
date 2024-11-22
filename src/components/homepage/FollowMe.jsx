@@ -10,7 +10,7 @@ const FollowMe = () => {
             Nie Przegap Nowości
         </Typography>
         <Typography variant="subtitle1" component="p">
-            Zaobserwuj mnie na
+            Zaobserwuj mnie
         </Typography>
         </Box>
         <Box className="follow-me-buttons">

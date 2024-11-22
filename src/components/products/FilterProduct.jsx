@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Box, Select, MenuItem, FormControl, InputLabel, TextField, Button, Modal } from '@mui/material';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
+import { Box, Select, MenuItem, FormControl, InputLabel, TextField, Button, Modal, Typography } from '@mui/material';
 import FilterListIcon from '@mui/icons-material/FilterList';
 
 const style = {
@@ -15,8 +14,6 @@ const style = {
   p: 4,
 };
 
-const VISIBLE_FIELDS = ['name', 'category', 'price', 'dateCreated'];
-
 const FilterProduct = () => {
   const [category, setCategory] = useState("");
   const [minPrice, setMinPrice] = useState("");
@@ -27,33 +24,19 @@ const FilterProduct = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const products = [
-    { id: 1, name: 'Apple', category: 'Fruit', price: 1, dateCreated: new Date() },
-    { id: 2, name: 'Banana', category: 'Fruit', price: 0.5, dateCreated: new Date() },
-    { id: 3, name: 'Carrot', category: 'Vegetable', price: 0.8, dateCreated: new Date() },
-    { id: 4, name: 'Broccoli', category: 'Vegetable', price: 1.5, dateCreated: new Date() },
-    { id: 5, name: 'Chicken', category: 'Meat', price: 5, dateCreated: new Date() }
-  ];
-
-  const filteredProducts = products
-    .filter(product => 
-      (category === "" || product.category === category) &&
-      (minPrice === "" || product.price >= parseFloat(minPrice)) &&
-      (maxPrice === "" || product.price <= parseFloat(maxPrice))
-    )
-    .sort((a, b) => {
-      if (sortOrder === "asc") {
-        return a.price - b.price;
-      } else if (sortOrder === "desc") {
-        return b.price - a.price;
-      }
-      return 0;
-    });
-
   return (
-    <Box sx={{padding: '0 20px'}}>
-      <Button onClick={handleOpen}>
-        <FilterListIcon/>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        padding: '0px 20px',
+      }}
+    >
+      <Button onClick={handleOpen} fullWidth>
+        <Typography>
+          Filtruj
+        </Typography>
+        <FilterListIcon />
       </Button>
       <Modal
         open={open}
@@ -68,26 +51,27 @@ const FilterProduct = () => {
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
-              <MenuItem value="">Wszystkie</MenuItem>
-              <MenuItem value="Fruit">Owoce</MenuItem>
-              <MenuItem value="Vegetable">Warzywa</MenuItem>
-              <MenuItem value="Meat">Mięso</MenuItem>
+              <MenuItem value="">Wszystko</MenuItem>
+              <MenuItem value="Shirts">Bluzki</MenuItem>
+              <MenuItem value="Hoods">Bluzy</MenuItem>
+              <MenuItem value="Pants">Spodnie</MenuItem>
+              <MenuItem value="Accesories">Akcesoria</MenuItem>
             </Select>
           </FormControl>
-          
-          <TextField 
-            label="Min Cena" 
-            variant="outlined" 
+
+          <TextField
+            label="Min Cena"
+            variant="outlined"
             type="number"
             value={minPrice}
             onChange={(e) => setMinPrice(e.target.value)}
             fullWidth
             sx={{ mt: 2 }}
           />
-          
-          <TextField 
-            label="Max Cena" 
-            variant="outlined" 
+
+          <TextField
+            label="Max Cena"
+            variant="outlined"
             type="number"
             value={maxPrice}
             onChange={(e) => setMaxPrice(e.target.value)}
@@ -107,17 +91,13 @@ const FilterProduct = () => {
             </Select>
           </FormControl>
 
-          <Button onClick={handleClose} sx={{ mt: 2 }} variant="contained">Zastosuj filtry</Button>
+          <Button onClick={handleClose} sx={{ mt: 2 }} variant="contained">
+            Zastosuj filtry
+          </Button>
         </Box>
       </Modal>
-
-      <DataGrid 
-        rows={filteredProducts}
-        columns={VISIBLE_FIELDS.map(field => ({ field, headerName: field, width: 150 }))}
-        components={{ Toolbar: GridToolbar }}
-      />
     </Box>
   );
-}
+};
 
 export default FilterProduct;
