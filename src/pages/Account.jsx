@@ -6,7 +6,7 @@ import '../css/accountPage.css'
 
 const Account = () => {
   return(
-    <Box sx={{marginBottom: '100px'}}>
+    <Box className='main-account-box'>
     <WelcomeAccount/>
     <AccountInfo/>
     <AccountDeliveries />
