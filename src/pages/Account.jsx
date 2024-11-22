@@ -3,6 +3,7 @@ import AccountDeliveries from "../components/Account/AccountDeliveries";
 import AccountInfo from "../components/Account/AccountInfo";
 import WelcomeAccount from "../components/Account/WelcomeAccount";
 import '../css/accountPage.css'
+import ReportIssue from "../components/Account/ReportIssue";
 
 const Account = () => {
   return(
@@ -10,6 +11,7 @@ const Account = () => {
     <WelcomeAccount/>
     <AccountInfo/>
     <AccountDeliveries />
+    <ReportIssue/>
     </Box>
   );
 }

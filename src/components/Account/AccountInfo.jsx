@@ -10,8 +10,8 @@ const AccountInfo = () => {
   };
 
   return (
-    <Box sx={{padding: "0 20px", marginTop: '20px',}}>
-      <Accordion sx={{boxShadow: 10, border: 'solid 1px #999'}}>
+    <Box className="account-info-container">
+      <Accordion className="accordion-custom">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -20,12 +20,7 @@ const AccountInfo = () => {
           <Typography>Moje Informacje</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Box sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            gap: '15px', 
-          }}>
+          <Box className="account-info-form">
             <FormControl variant="standard">
               <InputLabel htmlFor="name">Imię</InputLabel>
               <Input id="name" defaultValue="John" disabled={!isEditable} />
@@ -50,7 +45,7 @@ const AccountInfo = () => {
               <InputLabel htmlFor="zipcode">ZIP-Code</InputLabel>
               <Input id="zipcode" defaultValue="60-700" disabled={!isEditable} />
             </FormControl>
-            <Button onClick={toggleEdit} sx={{mt: 2}} variant="contained">
+            <Button onClick={toggleEdit} className="edit-button" variant="contained">
               {isEditable ? 'Zapisz' : 'Edytuj'}
             </Button>
           </Box>

@@ -1,8 +1,13 @@
 import { useState } from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Typography, Box, Button } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import RateModal from '../RateModal';
 
 const AccountDeliveries = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const [deliveries] = useState([
     {
       id: '123456',
@@ -24,13 +29,9 @@ const AccountDeliveries = () => {
     }
   ]);
 
-  const handleRatingClick = (deliveryId) => {
-    alert(`Ocena dla przesyłki ${deliveryId}`);
-  };
-
   return (
-    <Box sx={{ padding: "0 20px", marginTop: '20px' }}>
-      <Accordion sx={{ boxShadow: 10, border: 'solid 1px #999' }}>
+    <Box className="account-deliveries-container">
+      <Accordion className="accordion-custom">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -41,7 +42,7 @@ const AccountDeliveries = () => {
         <AccordionDetails>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
             {deliveries.map((delivery) => (
-              <Accordion key={delivery.id} sx={{ boxShadow: 2, marginBottom: '10px' }}>
+              <Accordion key={delivery.id} className="accordion-item">
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls={`panel-${delivery.id}-content`}
@@ -50,12 +51,13 @@ const AccountDeliveries = () => {
                   <Typography>Przesyłka ID: {delivery.id}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                    <Typography variant="h6">Status: {delivery.status}</Typography>
+                  <Box className="accordion-details-container">
+                    <Typography variant="h6" className="accordion-item-status">Status: {delivery.status}</Typography>
                     {delivery.status === 'delivered' && (
                       <Button
-                        onClick={() => handleRatingClick(delivery.id)}
+                        onClick={handleOpen}
                         variant="outlined"
+                        className="modal-button"
                       >
                         Oceń przesyłkę
                       </Button>
@@ -67,7 +69,7 @@ const AccountDeliveries = () => {
                         {item.name} x{item.quantity} - {item.price} PLN
                       </Typography>
                     ))}
-                    <Typography variant="h6">Łączna cena: {delivery.totalPrice} PLN</Typography>
+                    <Typography variant="h6" className="accordion-item-price">Łączna cena: {delivery.totalPrice} PLN</Typography>
                   </Box>
                 </AccordionDetails>
               </Accordion>
@@ -75,6 +77,7 @@ const AccountDeliveries = () => {
           </Box>
         </AccordionDetails>
       </Accordion>
+      <RateModal open={open} onClose={handleClose} />
     </Box>
   );
 };

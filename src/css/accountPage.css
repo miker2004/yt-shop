@@ -19,3 +19,57 @@
     padding: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
+
+.account-deliveries-container {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  
+  .accordion-custom {
+    box-shadow: 10px;
+    border: solid 1px #999;
+  }
+  
+  .accordion-item {
+    box-shadow: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .accordion-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .accordion-item-status {
+    font-weight: 600;
+  }
+  
+  .accordion-item-price {
+    font-weight: 600;
+  }
+  
+  .modal-button {
+    margin-top: 10px;
+  }
+
+  .account-info-container {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  
+  .accordion-custom {
+    box-shadow: 10px;
+    border: solid 1px #999;
+  }
+  
+  .account-info-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .edit-button {
+    margin-top: 10px;
+  }
