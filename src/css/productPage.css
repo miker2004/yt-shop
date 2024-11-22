@@ -1,0 +1,31 @@
+.searchbar-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+.serachbar-look{
+    border: solid 1px #888;
+}
+
+  .show-product-box {
+    padding: 0 20px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .show-more-box {
+    padding: 0 20px;
+    margin: 30px 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

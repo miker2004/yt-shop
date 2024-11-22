@@ -1,0 +1,158 @@
+.top-home { 
+    display: flex; 
+    gap: 12px; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 12px 0; 
+    padding: 16px 20px 0 20px; 
+} 
+.top-home h3 { 
+    font-size: 25px; 
+    font-weight: 700; 
+    line-height: 16px; 
+    margin: 0; 
+} 
+    /* ProductType component */ 
+.product-type { 
+    display: flex; 
+    gap: 8px; 
+    justify-content: center; 
+    margin-top: 40px; 
+    padding: 0 20px; 
+} 
+.product-type-box {
+    width: 107px; 
+    height: 88px; 
+    border-radius: 6px; 
+    border: solid 1px #D1D1D1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 4px; 
+    padding: 0; 
+} 
+.product-type-icon { 
+    font-size: 30px; 
+    background-color: #D9D9D9;
+    padding: 10px; 
+    border-radius: 360px; 
+    margin: 0; 
+} 
+.product-type-text {
+    font-size: 10px; 
+    line-height: 14px; 
+    margin: 0; 
+} 
+/* FeaturedProducts component */ 
+.featured-products { 
+    margin: 40px 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px; 
+} 
+.featured-products-title { 
+    font-size: 25px; 
+    line-height: 24px; 
+    font-weight: bold; 
+    text-align: center; 
+    margin-bottom: 20px; 
+} 
+
+/* ReviewsHome component */ 
+.reviews-home { 
+    padding: 0 20px; display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 40px; 
+} 
+.reviews-home-title {
+    font-size: 25px; 
+} 
+.reviews-home-box { 
+    display: flex;
+    gap: 16px; 
+    overflow-x: auto; 
+    max-width: 90vw; 
+    margin: 0 auto; 
+    padding-bottom: 10px; 
+} 
+.review-box { min-width: 220px;
+    max-width: 300px; 
+    border: solid 1px #999; 
+    border-radius: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    padding: 12px; gap: 8px; 
+} 
+.review-header { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+} 
+.review-user { 
+    display: flex; 
+    gap: 8px; 
+    height: 24px; 
+} 
+.review-user-icon {
+    width: 24px; 
+} 
+.review-user-name { 
+    font-size: 15px; 
+    margin: 4px 0; 
+    font-weight: 600; 
+    line-height: 16px; 
+} 
+.review-text { 
+    font-size: 14px; 
+    line-height: 20px; 
+    letter-spacing: 0.03em; 
+}
+
+/* SupportOffer component */ 
+.support-offer { 
+    padding: 0 20px; 
+    text-align: center; 
+    margin-top: 40px; 
+} 
+.support-offer-title { 
+    line-height: 1.5; 
+    font-size: 23px; 
+} 
+.support-offer-bold { 
+    font-weight: bold; 
+    margin-bottom: 15px; 
+} 
+.support-offer-link { 
+    font-size: 18px; 
+    line-height: 1.5; 
+} 
+
+/* FollowMe component */ 
+.follow-me { 
+    padding: 0 20px; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 40px; 
+    margin-bottom: 80px; 
+} 
+.follow-me-text { 
+    text-align: center; 
+    line-height: 1.5; 
+} 
+.follow-me-title { 
+    font-size: 25px; 
+} 
+.follow-me-buttons { 
+    display: flex; 
+    gap: 10px; 
+    flex-direction: column; 
+} 
+.follow-me-link { 
+    text-decoration: none; 
+}
