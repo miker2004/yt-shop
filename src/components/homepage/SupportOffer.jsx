@@ -6,6 +6,7 @@ const SupportOffer = () => {
       <Typography variant="h4" component="h2" className="support-offer-title">
         Zostań wspierającym, aby zdobyć{" "}
         <span style={{ fontWeight: "bold" }}>10% zniżki</span>.{" "}
+        <br />
         <Link href="" underline="none" className="support-offer-link">
           DOŁĄCZ DO WSPIERAJĄCYCH
         </Link>

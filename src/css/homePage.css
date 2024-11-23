@@ -34,10 +34,11 @@
 } 
 .product-type-icon { 
     font-size: 30px; 
-    background-color: #D9D9D9;
+    border: solid 1px  #D9D9D9;
     padding: 10px; 
     border-radius: 360px; 
     margin: 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 } 
 .product-type-text {
     font-size: 10px; 
@@ -71,6 +72,7 @@
 } 
 .reviews-home-title {
     font-size: 25px; 
+    margin-bottom: 20px;
 } 
 .reviews-home-box { 
     display: flex;
@@ -137,6 +139,7 @@
     padding: 0 20px; 
     display: flex; 
     align-items: center; 
+    justify-content: center;
     gap: 10px; 
     margin-top: 40px; 
     margin-bottom: 80px; 
