@@ -4,7 +4,7 @@ import TopHome from "../components/homepage/TopHome";
 import FollowMe from "../components/homepage/FollowMe";
 import ReviewsHome from "../components/homepage/ReviewsHome";
 import SupportOffer from "../components/homepage/SupportOffer";
-import '../css/HomePage.css'
+import './css/HomePage.css'
 
 const HomePage = () => {
   return(
