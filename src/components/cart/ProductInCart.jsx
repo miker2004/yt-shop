@@ -5,16 +5,33 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 
 const ProductInCart = () => {
   const [cartItems, setCartItems] = useState([
-    { id: 1, name: "Product Name", price: "Price" },
+    { id: 1, name: "Product Name1", price: '200$', quantity: 2 },
+    { id: 2, name: "Product Name2", price: '1000$', quantity: 1 },
   ]);
 
-  const incrementQuantity = (id) => {};
+const handleIncrease = (id) => {
+  setCartItems((prevItems) =>
+    prevItems.map((item) =>
+      item.id === id && item.quantity < 10 
+        ? {...item, quantity: item.quantity + 1} 
+        : item
+    )
+  );
+}
 
-  const decrementQuantity = (id) => {};
+const handleDecrease = (id) => {
+  setCartItems((prevItems) =>
+    prevItems.map((item) =>
+      item.id === id && item.quantity > 1
+        ? { ...item, quantity: item.quantity - 1 }
+        : item
+    )
+  );
+};
 
-  const removeItemFromCart = (id) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
-  };
+const removeItemFromCart = (id) => {
+  setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+};
 
   return (
     <Box
@@ -46,9 +63,9 @@ const ProductInCart = () => {
           <Box
             key={item.id}
             sx={{
-              width: "90%", // Zajmuje 90% szerokości rodzica
-              maxWidth: "500px", // Maksymalna szerokość 500px
-              height: "auto", // Automatyczna wysokość w zależności od zawartości
+              width: "90%", 
+              maxWidth: "500px",
+              height: "auto", 
               border: "solid 1px #D1D1D1",
               borderRadius: "20px",
               display: "flex",
@@ -57,9 +74,9 @@ const ProductInCart = () => {
               boxShadow: 5,
               padding: "10px",
               marginBottom: "20px",
-              transition: "transform 0.2s", // Animacja przy zmianie rozmiaru
+              transition: "transform 0.2s", 
               "&:hover": {
-                transform: "scale(1.02)", // Powiększenie przy najechaniu
+                transform: "scale(1.02)",
               },
             }}
           >
@@ -68,7 +85,7 @@ const ProductInCart = () => {
                 display: "flex",
                 gap: "15px",
                 alignItems: "center",
-                flexWrap: "wrap", // Umożliwia zawijanie elementów
+                flexWrap: "wrap", 
               }}
             >
               <Box
@@ -77,7 +94,7 @@ const ProductInCart = () => {
                   height: "100px",
                   borderRadius: "20px",
                   backgroundColor: "grey",
-                  flexShrink: 0, // Zapobiega zmniejszaniu obrazu
+                  flexShrink: 0, 
                 }}
               ></Box>
               <Box>
@@ -93,7 +110,7 @@ const ProductInCart = () => {
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginTop: "10px",
-                flexWrap: "wrap", // Responsywne zawijanie elementów
+                flexWrap: "wrap", 
                 gap: "10px",
               }}
             >
@@ -104,13 +121,13 @@ const ProductInCart = () => {
                   border: "1px solid #D1D1D1",
                   borderRadius: "20px",
                   overflow: "hidden",
-                  width: "100px",
+                  padding: '0 10px',
                   height: "40px",
                   boxShadow: 2,
                 }}
               >
                 <Button
-                  onClick={() => decrementQuantity(item.id)}
+                  onClick={() => handleDecrease(item.id)}
                   sx={{
                     minWidth: "0px",
                     height: "100%",
@@ -132,23 +149,24 @@ const ProductInCart = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  1
+                {item.quantity}
                 </Typography>
                 <Button
-                  onClick={() => incrementQuantity(item.id)}
-                  sx={{
-                    minWidth: "20px",
-                    height: "100%",
-                    borderLeft: "1px solid #D1D1D1",
-                    borderRadius: 0,
-                    fontSize: "13px",
-                    fontWeight: "bold",
-                    color: "black",
-                  }}
-                  aria-label="Increment quantity"
-                >
-                  +
-                </Button>
+                onClick={() => handleIncrease(item.id)}
+                sx={{
+                  minWidth: "20px",
+                  height: "100%",
+                  borderLeft: "1px solid #D1D1D1",
+                  borderRadius: 0,
+                  fontSize: "13px",
+                  fontWeight: "bold",
+                  color: "black",
+                  margin: 0
+                }}
+                aria-label="Increment quantity"
+              >
+                +
+              </Button>
               </Box>
               <IconButton
                 color="primary"
