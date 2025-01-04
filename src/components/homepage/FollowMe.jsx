@@ -6,10 +6,10 @@ const FollowMe = () => {
   return (
     <Box className="follow-me">
         <Box className="follow-me-text">
-        <Typography variant="h2" component="h2" className="follow-me-title">
+        <Typography component="h2" className="follow-me-title">
             Nie Przegap Nowości
         </Typography>
-        <Typography variant="subtitle1" component="p">
+        <Typography component="p">
             Zaobserwuj mnie
         </Typography>
         </Box>

@@ -7,7 +7,7 @@ const ReviewsHome = () => {
 
     return (
         <Box className="reviews-home">
-            <Typography variant="h2" component="h2" className="reviews-home-title">
+            <Typography component="h2" className="reviews-home-title">
                 Opinie
             </Typography>
             <Box className="reviews-home-box">

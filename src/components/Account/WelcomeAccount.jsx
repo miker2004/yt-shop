@@ -16,7 +16,7 @@ const WelcomeAccount = () => {
   return(
     <Box className="welcome-account-box">
         <FaceIcon className="account-pfp"/>
-        <Typography variant="h4" element="h2">
+        <Typography element="h2">
             John Doe
         </Typography>
     </Box>

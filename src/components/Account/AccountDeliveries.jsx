@@ -63,13 +63,13 @@ const AccountDeliveries = () => {
                       </Button>
                     )}
 
-                    <Typography variant="h6">Zakupione przedmioty:</Typography>
+                    <Typography component="h2">Zakupione przedmioty:</Typography>
                     {delivery.items.map((item, index) => (
                       <Typography key={index}>
                         {item.name} x{item.quantity} - {item.price} PLN
                       </Typography>
                     ))}
-                    <Typography variant="h6" className="accordion-item-price">Łączna cena: {delivery.totalPrice} PLN</Typography>
+                    <Typography component="h2" className="accordion-item-price">Łączna cena: {delivery.totalPrice} PLN</Typography>
                   </Box>
                 </AccordionDetails>
               </Accordion>

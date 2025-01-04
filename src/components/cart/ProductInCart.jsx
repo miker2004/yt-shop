@@ -54,7 +54,7 @@ const removeItemFromCart = (id) => {
           <ShoppingBasketIcon
             sx={{ fontSize: 60, color: "#D1D1D1", marginBottom: "10px" }}
           />
-          <Typography variant="h6" color="textSecondary">
+          <Typography component="h2" color="textSecondary">
             Koszyk jest pusty
           </Typography>
         </Box>
@@ -98,10 +98,10 @@ const removeItemFromCart = (id) => {
                 }}
               ></Box>
               <Box>
-                <Typography variant="h6" sx={{ marginBottom: "5px" }}>
+                <Typography component="h3" sx={{ marginBottom: "5px" }}>
                   {item.name}
                 </Typography>
-                <Typography variant="body1">{item.price}</Typography>
+                <Typography component="h4">{item.price}</Typography>
               </Box>
             </Box>
             <Box
