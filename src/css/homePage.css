@@ -123,14 +123,14 @@
 } 
 .support-offer-title { 
     line-height: 1.5; 
-    font-size: 23px; 
+    font-size: 23px !important; 
 } 
 .support-offer-bold { 
     font-weight: bold; 
     margin-bottom: 15px; 
 } 
 .support-offer-link { 
-    font-size: 18px; 
+    font-size: 18px !important; 
     line-height: 1.5; 
 } 
 
@@ -149,7 +149,7 @@
     line-height: 1.5; 
 } 
 .follow-me-title { 
-    font-size: 25px; 
+    font-size: 25px !important; 
 } 
 .follow-me-buttons { 
     display: flex; 
