@@ -8,7 +8,7 @@ const Searchbar = () => {
   const handleSearch = labelOptionValue => {
     console.log('Search value:', labelOptionValue);
   };
-
+ 
   return (
     <Box className='searchbar-box'>
       <SearchBar
