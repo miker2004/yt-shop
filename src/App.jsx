@@ -7,6 +7,7 @@ const HomePageLazy = lazy(() => import('./pages/HomePage'));
 const CartLazy = lazy(() => import('./pages/Cart'));
 const AccountLazy = lazy(() => import('./pages/Account'));
 const ProductsLazy = lazy(() => import('./pages/Products'));
+const FullProductPage= lazy(() => import('./components/products/FullProductPage'));
 const NotFoundLazy = lazy(() => import('./components/NotFound'));
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path='account' element={<AccountLazy />} />
             <Route path='products' element={<ProductsLazy />} />
             <Route path='*' element={<NotFoundLazy />} />
+            <Route path='/products/id' element={<FullProductPage />}/>
           </Routes>
         </Suspense>
         <Navigation />

@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Box, Typography, Button, IconButton } from "@mui/material";
+import { Box, Typography, Button, IconButton, colors } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import { Link } from "react-router-dom";
 
 const ProductInCart = () => {
   const [cartItems, setCartItems] = useState([
@@ -98,10 +99,10 @@ const removeItemFromCart = (id) => {
                 }}
               ></Box>
               <Box>
-                <Typography component="h3" sx={{ marginBottom: "5px" }}>
+                <Typography component={Link} to='/products/id' sx={{ marginBottom: "5px", textDecoration: 'none', color: 'black', }}>
                   {item.name}
                 </Typography>
-                <Typography component="h4">{item.price}</Typography>
+                <Typography component="h4" sx={{color: '#999'}}>{item.price}</Typography>
               </Box>
             </Box>
             <Box

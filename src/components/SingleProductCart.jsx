@@ -1,5 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import '../css/singleproduct.css'
+import { Link } from "react-router-dom";
+
 
 const SingleProductCart = () => {
   return(
@@ -8,7 +10,14 @@ const SingleProductCart = () => {
     <Box className="featured-products-details">
       <Typography  component="h2" className="featured-products-details-name">Pencil</Typography>
       <Typography  component="h3">$6.99</Typography>
-      <Button variant="contained" className="featured-products-button">Check Out</Button>
+      <Button
+        variant="contained"
+        className="featured-products-button"
+        component={Link}
+        to="/products/id"
+      >
+        Check Out
+      </Button>
     </Box>
   </Box>
   );

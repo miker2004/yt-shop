@@ -13,6 +13,11 @@
     margin: 0; 
 } 
     /* ProductType component */ 
+
+    .product-type-link {
+        text-decoration: none !important;
+      }
+
 .product-type { 
     display: flex; 
     gap: 8px; 
@@ -41,9 +46,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 } 
 .product-type-text {
-    font-size: 10px; 
-    line-height: 14px; 
+    font-size: 12px; 
+    line-height: 14px;
+    color: black; 
     margin: 0; 
+    text-decoration: none;
+    text-align: center;
 } 
 /* FeaturedProducts component */ 
 .featured-products { 
