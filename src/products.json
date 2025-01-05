@@ -1,0 +1,25 @@
+{
+    "products": [
+        { "name": "T-Shirt" , "price": 35 , "category": "clothes" },
+        { "name": "Back Pack" , "price": 50 , "category": "accessories" },
+        { "name": "Cup" , "price": 20 , "category": "other"},
+        { "name": "Jeans" , "price": 80 , "category": "clothes" },
+        { "name": "Glasses" , "price": 120 , "category": "accessories" },
+        { "name": "Poster" , "price": 5 , "category": "other"},
+        { "name": "Pants" , "price": 10 , "category": "clothes" },
+        { "name": "Cap" , "price": 25 , "category": "accessories" },
+        { "name": "Cup2" , "price": 40 , "category": "other"},
+        { "name": "Dress" , "price": 200 , "category": "clothes" },
+        { "name": "Socks" , "price": 15 , "category": "accessories" },
+        { "name": "Cup3" , "price": 5 , "category": "other"},
+        { "name": "Coat" , "price": 180 , "category": "clothes" },
+        { "name": "Ear Rings" , "price": 10 , "category": "accessories" },
+        { "name": "Key Chain" , "price": 3 , "category": "other"},
+        { "name": "Sweater" , "price": 140 , "category": "clothes" },
+        { "name": "Bag" , "price": 60 , "category": "accessories" },
+        { "name": "umbrella" , "price": 95 , "category": "other"},
+        { "name": "Hoodie" , "price": 190 , "category": "clothes" },
+        { "name": "Shoes" , "price": 500 , "category": "accessories" },
+        { "name": "Mascot" , "price": 60 , "category": "other"}
+    ]
+}
